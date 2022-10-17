@@ -39,7 +39,7 @@ export const Card = ({ disabled, gameId, homeTeam, awayTeam, homeTeamScore, away
         <span className='text-sm md:text-base text-gray-700 font-bold'>{gameTime}</span>
 
         <form className='flex space-x-4 justify-center items-center'>
-            <span className='uppercase'>{homeTeam}</span>
+            <span className='uppercase text-xs md:text-base'>{homeTeam}</span>
             <img className='' src={`/imgs/flags/${homeTeam}.png`} alt={`bandeira de ${homeTeam}`} />
 
             <input 
@@ -71,7 +71,7 @@ export const Card = ({ disabled, gameId, homeTeam, awayTeam, homeTeamScore, away
             />
             
             <img className='' src={`/imgs/flags/${awayTeam}.png`} alt={`bandeira de ${awayTeam}`} />
-            <span className='uppercase'>{awayTeam}</span>
+            <span className='uppercase text-xs md:text-base'>{awayTeam}</span>
         </form>
 
     </div>
