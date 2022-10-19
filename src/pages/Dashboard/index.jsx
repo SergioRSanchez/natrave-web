@@ -80,7 +80,7 @@ export const Dashboard = () => {
 
                 </section>
 
-                <section id="content" className='p-4 container max-w-3xl space-y-4'>
+                <section id="content" className='p-2 md:p-4 container max-w-3xl space-y-4'>
                     <DateSelect currentDate={currentDate} onChange={setDate} />
 
                     <div className='space-y-4'>
@@ -94,8 +94,8 @@ export const Dashboard = () => {
                                 homeTeam={ game.homeTeam }
                                 awayTeam={ game.awayTeam }
                                 gameTime={ format(new Date(game.gameTime), 'H:mm')}
-                                homeTeamScore={user?.hunches?.[game.id]?.homeTeamScore || ''}
-                                awayTeamScore={user?.hunches?.[game.id]?.awayTeamScore || ''}
+                                homeTeamScore={String(user?.hunches?.[game.id]?.homeTeamScore) || ''}
+                                awayTeamScore={String(user?.hunches?.[game.id]?.awayTeamScore) || ''}
                             />
                         ))}
 
