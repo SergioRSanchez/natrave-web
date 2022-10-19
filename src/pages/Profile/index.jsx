@@ -91,7 +91,7 @@ export const Profile = () => {
 
                 </section>
 
-                <section id="content" className='p-4 container max-w-3xl space-y-4'>
+                <section id="content" className='p-2 md:p-4 container max-w-3xl space-y-4'>
                     <h2 className='text-red-500 font-bold text-xl'>Seus palpites</h2>
 
                     <DateSelect currentDate={currentDate} onChange={setDate} />
@@ -107,8 +107,8 @@ export const Profile = () => {
                                 homeTeam={ game.homeTeam }
                                 awayTeam={ game.awayTeam }
                                 gameTime={ format(new Date(game.gameTime), 'H:mm')}
-                                homeTeamScore={user?.hunches?.[game.id]?.homeTeamScore || ''}
-                                awayTeamScore={user?.hunches?.[game.id]?.awayTeamScore || ''}
+                                homeTeamScore={String(user?.hunches?.[game.id]?.homeTeamScore) || ''}
+                                awayTeamScore={String(user?.hunches?.[game.id]?.awayTeamScore) || ''}
                                 disabled={true}
                             />
                         ))}
