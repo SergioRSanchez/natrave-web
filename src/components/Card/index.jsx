@@ -45,7 +45,7 @@ export const Card = ({ disabled, gameId, homeTeam, awayTeam, homeTeamScore, away
             <input 
               max={10} 
               min={0} 
-              placeholder='' 
+              placeholder='-' 
               type="number" 
               className='bg-red-300/[.2]  w-[55px] h-[55px] text-red-700 text-xl text-center'
               name="homeTeamScore"
@@ -60,7 +60,7 @@ export const Card = ({ disabled, gameId, homeTeam, awayTeam, homeTeamScore, away
             <input 
               max={10} 
               min={0} 
-              placeholder=''
+              placeholder='-'
               type="number" 
               className='bg-red-300/[.2] w-[55px] h-[55px] text-red-700 text-xl text-center'
               name="awayTeamScore"
